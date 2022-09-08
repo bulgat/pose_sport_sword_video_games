@@ -5,6 +5,7 @@ node_modules/.cache/default-development/0.pack (178.20 MB)
 node_modules/.cache/default-development/9.pack (159.29 MB)
 
 git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch node_modules/.cache/default-development/0.pack" HEAD
+git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch node_modules/.cache/default-development/9.pack" HEAD
 git filter-branch --index-filter \
     'git rm -rf --cached --ignore-unmatch node_modules/.cache/default-development/0.pack' HEAD
 git filter-branch --tree-filter 'rm -f node_modules/.cache/default-development/0.pack' HEAD
