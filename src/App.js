@@ -10,12 +10,7 @@ import * as tf from "@tensorflow/tfjs";
 import * as posenet from "@tensorflow-models/posenet";
 import Webcam from "react-webcam";
 import { drawKeypoints, drawSkeleton, drawSegment } from "./utilities";
-//import {Component} from 'react';
-//import { Router, Route } from "react-router-dom";
-//import animals from './data';
-//import AnimalCard from './AnimalCard';
-//import { GameOver } from './GameOver';
-//import {ReactDOM } from 'react-dom';
+import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
 
 function App() {
 //
@@ -344,10 +339,16 @@ class ClickCounterButton extends React.Component{
 			);
 		}
 		//index
-	return (<div className="centerHref"> <ClockHell/><ClockInput/><ClickCounterButton/><a href="./setup.html">Start Menu</a>
+	return (
+		<div>
+	<div className="centerHref"> <ClockHell/><ClockInput/><ClickCounterButton/><a href="./setup.html">Start Menu</a>
 
 		<p></p>
 		<img src="./image/Cover.png" alt="Logo"  className="center" />
+		<h3>
+      Пиво <FaBeer />?
+    </h3>
+		</div>
 		</div>
 		);
 	}
