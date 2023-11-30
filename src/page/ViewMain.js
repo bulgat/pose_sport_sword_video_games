@@ -7,16 +7,18 @@ constructor(props){
 	super(props)
 	console.log("start");
 	this.startTimer = this.startTimer.bind(this);
-	this.startTimer();
+	//this.startTimer();
 }
-startTimer(){
-	console.log("start 0000");
+startTimer(param){
+	console.log("start =",param);
+	document.getElementById("startGame").play();
 	setInterval(()=>{
 		this.count++;
-		console.log("this.count ="+this.count);
+		//console.log("this.count ="+this.count);
 	},1000);
 }
 render() {
+	
 		return (
 			<div>
 					<div className="centerHref"> 
@@ -28,7 +30,10 @@ render() {
 					Пиво <FaBeer />?
 					</h3>
 					</div>
-					<button ></button>
+					<button type='button' className="btn-default btn" onClick={()=>{this.startTimer(666)}}>
+
+					</button>
+					<audio id="startGame" src="./8BitMusic.mp3" preload="auto"></audio>
 			</div>
 		)
 		}
