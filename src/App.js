@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-
+import {ViewMain} from './page/ViewMain.js'
 import React, { useRef } from "react";
 import "./App.css";
 import "./Canvas.js";
@@ -11,6 +11,7 @@ import * as posenet from "@tensorflow-models/posenet";
 import Webcam from "react-webcam";
 import { drawKeypoints, drawSkeleton, drawSegment } from "./utilities";
 import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
+
 
 function App() {
 //
@@ -341,14 +342,7 @@ class ClickCounterButton extends React.Component{
 		//index
 	return (
 		<div>
-	<div className="centerHref"> <ClockHell/><ClockInput/><ClickCounterButton/><a href="./setup.html">Start Menu</a>
-
-		<p></p>
-		<img src="./image/Cover.png" alt="Logo"  className="center" />
-		<h3>
-      Пиво <FaBeer />?
-    </h3>
-		</div>
+<ViewMain/>
 		</div>
 		);
 	}
