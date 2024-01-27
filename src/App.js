@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {ViewMain} from './page/ViewMain.js'
+import {ViewSetup} from './page/ViewSetup.js'
 import React, { useRef } from "react";
 import "./App.css";
 import "./Canvas.js";
@@ -82,16 +83,7 @@ function App() {
 	   drawKeypoints(pose["keypoints"], 0.6, ctx);
 	   drawSkeleton(pose["keypoints"], 0.7, ctx);
 	   
-	    //var kol = pose["keypoints"];
-		
-		
-	   //var ctx = context.getContext("2d");
-	   //localStorage.getItem('heightArm');
-	   
-	  //var heightArm = new GameParam().HeightArm;
-	   
-	  
-	   
+
 	   var heightArm = localStorage.getItem('heightArm');
 		if (heightArm == null) {
 			heightArm = new GameParam().HeightArm;
@@ -102,37 +94,13 @@ function App() {
 		}
 		
 	    drawSegment([heightArm, 0], [heightArm, 650], 0.6, 1, ctx);
-		/*
-		var ctxK = canvas.getContext("2d");
-			ctxK.moveTo(0, 0);
-				ctxK.lineTo(200, 100);
-				ctxK.stroke();
-				
-				
-				/**
- * Draws a line on a canvas, i.e. a joint
-
-export function drawSegment([ay, ax], [by, bx], color, scale, ctx) {
-				*/
-	   //drawCanvasBattle();
+		
   };
 	
 	runPosenet();
 	
 	
-//var gameOver =>{
-	
-	
-//}(100);
 
-	
-  	
-//const root = React.createElement('div',{},"TTTTTTTTTTTT");
-	
-	//class MyReact extends Component {
-		
-	//};
-///
 class Hell extends React.Component{
 	render() {
 		return (
@@ -143,28 +111,7 @@ class Hell extends React.Component{
 		)
 	}
 }
-/*
-class ClockHell extends React.Component{
-	construct(props){
-		super(props);
-		this.launchClock()
-		this.state={
-			currentTime:(new Date()).toLocaleString()
-		}
-	}
-	launchClock() {
-		setInterval(()=>{
-		console.log("============")
-		this.setState({
-			currentTime:(new Date()).toLocaleString()
-		})
-		},1000)
-	}
-	render() {
-		return <div>{this.state.currentTime}</div>
-	}
-}
-*/
+
 
 class ClockHell extends React.Component{
 	state={
@@ -211,15 +158,10 @@ class ClickCounterButton extends React.Component{
 		</button>
 	}
 }
-/*
-	<div><ClickCounterButton
-	counter={this.state.counter}
-	handler={this.handleClick}/>
-	</div>
-*/
+
 	let kol = React.createElement('a',{href:'oper.ru'},'web_')
 	let ttt = React.createElement('div',null,kol,kol)
-///
+
 
 	function MyForm() {
 		var url = window.location.href;
@@ -346,7 +288,7 @@ class ClickCounterButton extends React.Component{
 		</div>
 		);
 	}
-	////// 
+
 
   return (
   
